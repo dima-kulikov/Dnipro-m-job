@@ -7,13 +7,53 @@
   height: 640px;
   background-size: cover;
 
-  .header__logo img {
+  // .header__flex{
+  //   display: flex;
+  // }
+  .header__logo {
+    outline: 2px solid red;
     display: block;
     margin: 30px auto 47px auto;
+    width: 258px;
+    @media (min-width: 768px){
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    } 
   }
+
+  .header__info{
+    display: none;
+    @media (min-width: 768px){
+      outline: 2px solid gold;
+      display: flex;
+      justify-content: space-between;
+      width: 289px;
+      align-items: center;
+      .header__info__tel{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+      color: #FFFFFF;
+      &::before{
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 16px;
+        background-image:url(../images/icons/call-answer.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      }
+
+    }
+  }
+
   .header__center-block {
     display: block;
-    margin: 0px auto;
     outline: 2px solid forestgreen;
     width: 297px;
     position: absolute;
@@ -21,7 +61,12 @@
     left: 0px;
     right: 0px;
     z-index: 2;
+    @media(min-width: 768px){
+      margin: 0px;
+
+    }
   }
+
   .header__text {
     font-family: Montserrat;
     font-style: normal;
@@ -31,9 +76,11 @@
     color: #ffffff;
     text-align: center;
   }
+
   .header__text-size {
     font-size: 36px;
   }
+
   .header__text__second {
     font-family: Montserrat;
     font-style: normal;
@@ -42,6 +89,7 @@
     line-height: 129.1%;
     color: #ffffff;
   }
+
   .header__man {
     outline: 2px solid red;
     position: absolute;
@@ -52,8 +100,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     left: -100px;
+    right: 0px;
     bottom: 0px;
+    margin: auto;
+    @media (min-width: 768px){
+      left: initial;
+    }
   }
+
   .header__btn {
     display: block;
     width: 250px;

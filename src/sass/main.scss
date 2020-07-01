@@ -4,3 +4,12 @@
 @import 'base.scss';
 @import 'stylesheet.scss';
 @import 'header.scss';
+
+
+.block-size{
+    outline: 2px solid fuchsia;
+    padding: 0px 30px;
+    max-width: 1280px;
+    margin: 0px auto;
+
+}
