@@ -6,12 +6,12 @@
   width: 100%;
   height: 640px;
   background-size: cover;
-
-  // .header__flex{
-  //   display: flex;
-  // }
+  background-position: center;
+  @media (min-width: 768px){
+    height: 768px;
+  }
   .header__logo {
-    outline: 2px solid red;
+    // outline: 2px solid red;
     display: block;
     margin: 30px auto 47px auto;
     width: 258px;
@@ -25,36 +25,52 @@
   .header__info{
     display: none;
     @media (min-width: 768px){
-      outline: 2px solid gold;
+      // outline: 2px solid gold;
       display: flex;
       justify-content: space-between;
       width: 289px;
       align-items: center;
-      .header__info__tel{
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: right;
-      color: #FFFFFF;
-      &::before{
-        content: "";
-        display: inline-block;
-        width: 40px;
-        height: 16px;
-        background-image:url(../images/icons/call-answer.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      }
 
+      .header__info__tel > a{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: #FFFFFF;
+        text-decoration: none;
+
+        &:hover{
+          color: #ff2f00;
+        }
+
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 40px;
+          height: 16px;
+          background-image: url(../images/icons/call-answer.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .bloki{
+    position: relative;
+    max-width: 1280px;
+    // outline: 2px solid gold;
+    height: 524px;
+    @media (min-width: 768px){
+      height: 653px;
     }
   }
 
   .header__center-block {
     display: block;
-    outline: 2px solid forestgreen;
+    // outline: 2px solid forestgreen;
     width: 297px;
     position: absolute;
     margin: auto;
@@ -63,6 +79,9 @@
     z-index: 2;
     @media(min-width: 768px){
       margin: 0px;
+      width: 530px;
+      bottom: 112px;
+      top: 45px;
 
     }
   }
@@ -75,10 +94,19 @@
     line-height: 56px;
     color: #ffffff;
     text-align: center;
+    @media (min-width: 768px){
+      font-size: 80px;
+      line-height: 98px;
+      color: #FFFFFF;
+      text-align: left;
+    }
   }
 
   .header__text-size {
     font-size: 36px;
+    @media(min-width: 768px){
+      font-size: 63px;
+    }
   }
 
   .header__text__second {
@@ -88,10 +116,28 @@
     font-size: 18px;
     line-height: 129.1%;
     color: #ffffff;
+    @media(min-width: 768px){
+      text-align: left;
+    }
+  }
+
+  .header__text__three{
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FFFFFF;
+    margin: 66px 0px 70px;
+    width: 380px;
+    @media (max-width: 768px){
+      display: none;
+
+    }
   }
 
   .header__man {
-    outline: 2px solid red;
+    // outline: 2px solid red;
     position: absolute;
     width: 545px;
     height: 365px;
@@ -99,12 +145,20 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    left: -100px;
+    left: -130px;
     right: 0px;
     bottom: 0px;
     margin: auto;
     @media (min-width: 768px){
       left: initial;
+    }
+    @media (min-width: 800px){
+      width: 600px;
+      height: 420px;
+    }
+    @media (min-width: 1000px){
+      width: 670px;
+      height: 490px;
     }
   }
 
@@ -112,14 +166,15 @@
     display: block;
     width: 250px;
     height: 50px;
-    left: 55px;
-    top: 550px;
+    // left: 55px;
+    // top: 550px;
     border: 2px solid #ffffff;
     box-sizing: border-box;
     border-radius: 36px;
-    margin: 290px auto 0px;
+    margin: 300px auto 0px;
     background-color: transparent;
     cursor: pointer;
+    position: relative;
     // стиль текста кнопки
     font-family: Montserrat;
     font-style: normal;
@@ -127,5 +182,39 @@
     font-size: 15px;
     line-height: 18px;
     color: #ffffff;
+    @media(min-width: 768px){
+      margin: 100px 0px 0px;
+    }
+  }
+
+  .header__btn:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.5s;
+    border-radius: 36px;
+  }
+
+  .btn-1c:after {
+    width: 0%;
+    height: 1%;
+    top: 45%;
+    left: -2px;
+    background: rgb(255, 255, 255);
+    border-radius: 36px;
+    // border: 2px solid red;
+  }
+  .btn-1c:hover,
+  .btn-1c:active {
+    color: #ff2f00;
+    border-radius: 36px;
+  }
+  
+  .btn-1c:hover:after,
+  .btn-1c:active:after {
+    width: 102%;
+    border-radius: 36px;
+    height: 100%;
+    top: 0%;
   }
 }
