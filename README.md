@@ -1,4 +1,4 @@
-https://github.com/dima-kulikov/Dnipro-m-job/build/index.html
+https://dima-kulikov.github.io/Dnipro-m-job/build/index.html
 
 ![Banner](./banner.png)
 
