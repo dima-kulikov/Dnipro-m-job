@@ -1,0 +1,25 @@
+.if-you{
+    background-image: url(../images/if-you-bg.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .if-you__block{
+        outline: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;   
+    }
+    .if-you__block__inner{
+        outline: 2px solid fuchsia;
+        width: 100%;
+
+    }
+    .if-you__block__inner img{
+        display: block;
+        margin: 0px auto;
+    }
+    .if-you__block__inner p{
+        text-align: center;
+    }
+}

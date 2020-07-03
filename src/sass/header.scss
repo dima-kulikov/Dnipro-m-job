@@ -1,5 +1,4 @@
 .header {
-  position: absolute;
   overflow: hidden;
   background-image: url(../images/head-bg.png);
   background-repeat: no-repeat;
@@ -10,6 +9,7 @@
   @media (min-width: 768px){
     height: 768px;
   }
+
   .header__logo {
     // outline: 2px solid red;
     display: block;
@@ -71,7 +71,7 @@
   .header__center-block {
     display: block;
     // outline: 2px solid forestgreen;
-    width: 297px;
+    max-width: 297px;
     position: absolute;
     margin: auto;
     left: 0px;
@@ -79,7 +79,7 @@
     z-index: 2;
     @media(min-width: 768px){
       margin: 0px;
-      width: 530px;
+      max-width: 530px;
       bottom: 112px;
       top: 45px;
 
@@ -94,6 +94,9 @@
     line-height: 56px;
     color: #ffffff;
     text-align: center;
+    @media (max-width: 360px){
+      font-size: 36px;
+    }
     @media (min-width: 768px){
       font-size: 80px;
       line-height: 98px;
@@ -104,6 +107,9 @@
 
   .header__text-size {
     font-size: 36px;
+    @media (max-width: 360px){
+      font-size: 28px;
+    }
     @media(min-width: 768px){
       font-size: 63px;
     }
@@ -116,6 +122,9 @@
     font-size: 18px;
     line-height: 129.1%;
     color: #ffffff;
+    @media (max-width: 360px){
+      font-size: 16px;
+    }
     @media(min-width: 768px){
       text-align: left;
     }
@@ -145,12 +154,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    left: -130px;
+    left: 50%;
     right: 0px;
     bottom: 0px;
     margin: auto;
+    transform: translate(-50%);
     @media (min-width: 768px){
       left: initial;
+      transform: none;
     }
     @media (min-width: 800px){
       width: 600px;
@@ -182,6 +193,9 @@
     font-size: 15px;
     line-height: 18px;
     color: #ffffff;
+    @media (max-width: 360px){
+      width: 90%;
+    }
     @media(min-width: 768px){
       margin: 100px 0px 0px;
     }
@@ -204,12 +218,14 @@
     border-radius: 36px;
     // border: 2px solid red;
   }
+
   .btn-1c:hover,
   .btn-1c:active {
     color: #ff2f00;
     border-radius: 36px;
+    outline: 0px;
   }
-  
+
   .btn-1c:hover:after,
   .btn-1c:active:after {
     width: 102%;
